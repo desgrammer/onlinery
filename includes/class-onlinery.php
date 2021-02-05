@@ -7,7 +7,7 @@
  * public-facing side of the site and the admin area.
  *
  * @link       https://desgrammer.com
- * @since      1.0.0
+ * @since      0.0.1
  *
  * @package    Onlinery
  * @subpackage Onlinery/includes
@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      1.0.0
+ * @since      0.0.1
  * @package    Onlinery
  * @subpackage Onlinery/includes
  * @author     DesGrammer <support@desgrammer.com>
@@ -33,7 +33,7 @@ class Onlinery {
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   protected
 	 * @var      Onlinery_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
@@ -42,7 +42,7 @@ class Onlinery {
 	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   protected
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
@@ -51,7 +51,7 @@ class Onlinery {
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   protected
 	 * @var      string    $version    The current version of the plugin.
 	 */
@@ -64,13 +64,13 @@ class Onlinery {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function __construct() {
 		if ( defined( 'ONLINERY_VERSION' ) ) {
 			$this->version = ONLINERY_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '0.0.1';
 		}
 		$this->plugin_name = 'onlinery';
 
@@ -78,6 +78,7 @@ class Onlinery {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+		$this->define_general_hooks();
 
 	}
 
@@ -94,33 +95,16 @@ class Onlinery {
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function load_dependencies() {
 
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-onlinery-loader.php';
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-onlinery-i18n.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the admin area.
-		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-onlinery-admin.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-onlinery-public.php';
+		require_once ONLINERY_PATH . 'includes/post-types/class-onlinery-products.php';
 
 		$this->loader = new Onlinery_Loader();
 
@@ -132,7 +116,7 @@ class Onlinery {
 	 * Uses the Onlinery_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function set_locale() {
@@ -147,15 +131,19 @@ class Onlinery {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
 
 		$plugin_admin = new Onlinery_Admin( $this->get_plugin_name(), $this->get_version() );
+		$postype_products = new Onlinery_Products();
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_footer', $plugin_admin, 'onlinery_admin_widget' );
+
+		$this->loader->add_action( 'current_screen', $postype_products, 'edit_product_screen' );
 
 	}
 
@@ -163,7 +151,7 @@ class Onlinery {
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function define_public_hooks() {
@@ -175,10 +163,15 @@ class Onlinery {
 
 	}
 
+	private function define_general_hooks() {
+		$postype_products = new Onlinery_Products();
+		$this->loader->add_action( 'init', $postype_products, 'register_post_type' );
+	}
+
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function run() {
 		$this->loader->run();
@@ -188,7 +181,7 @@ class Onlinery {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     1.0.0
+	 * @since     0.0.1
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
@@ -198,7 +191,7 @@ class Onlinery {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     0.0.1
 	 * @return    Onlinery_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
@@ -208,7 +201,7 @@ class Onlinery {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     0.0.1
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {

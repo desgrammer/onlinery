@@ -6,7 +6,7 @@
  * This file is used to markup the public-facing aspects of the plugin.
  *
  * @link       https://desgrammer.com
- * @since      1.0.0
+ * @since      0.0.1
  *
  * @package    Onlinery
  * @subpackage Onlinery/public/partials
