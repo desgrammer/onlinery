@@ -97,7 +97,6 @@ class Onlinery_Admin {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/onlinery-admin.js', array( 'jquery' ), $this->version, false );
-
 	}
 
 	public function onlinery_admin_widget( $data ) {

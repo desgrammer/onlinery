@@ -6,6 +6,8 @@
     <?php do_action( 'wp_head' ) ?>
 </head>
 <body>
+<div id="onlineryProducts"></div>
+<script src="<?php echo ONLINERY_URL . 'dist/js/product.min.js' ?>"></script>
 <?php do_action( 'wp_footer' ) ?>
 </body>
 </html>
