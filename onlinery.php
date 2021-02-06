@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Onlinery
  * Plugin URI:        https://onlinery.id
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       The most versatile online store plugin.
  * Version:           0.0.1
  * Author:            DesGrammer
  * Author URI:        https://desgrammer.com

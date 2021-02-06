@@ -49,6 +49,11 @@ class Onlinery_Products {
 		);
     }
 
+	/**
+	 * Advanced design of edit product
+	 *
+	 * @return void
+	 */
     public function edit_product_screen() {
         $screen = get_current_screen();
         if ( $screen->post_type == 'onl_products' && $screen->action == 'add' ) {
