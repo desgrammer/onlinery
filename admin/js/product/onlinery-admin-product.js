@@ -7,6 +7,50 @@ import { faImage, faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
 import wplogo from "../../../images/wordpress-logo-white.svg";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      productName: '',
+      productPrice: '',
+      productDescription: '',
+      productImage: '',
+    };
+
+    this.handleUpload = this.handleUpload.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleUpload() {
+    let frame = wp.media({
+      title: 'Select or Upload Media',
+      button: {
+        text: 'Use this Image'
+      },
+      multiple: false
+    });
+
+    frame.on('select', function () {
+      // Get media attachment details from the frame state
+			let attachment = frame.state().get('selection').first().toJSON();
+
+      jQuery('input[name=productImage]').val(attachment.id)
+    })
+
+    frame.open();
+  }
+
+  handleChange(event) {
+    let name = event.target.getAttribute('name')
+    console.log(name)
+    this.setState({[name]: event.target.value});
+  }
+
+  handleSubmit() {
+    console.log('submitted')
+    console.log(this.state)
+  }
+
   render() {
     return (
       <>
@@ -18,50 +62,55 @@ class App extends React.Component {
         </div>
         <div className="mr-5">
           <button className="mr-2 px-5 py-2 text-green-700 border-green-50 bg-green-50">Discard</button>
-          <button className="px-5 py-2 text-white border-green-700 bg-green-700">Save</button>
+          <button onClick={this.handleSubmit} className="px-5 py-2 text-white border-green-700 bg-green-700">Save</button>
         </div>
       </div>
-      <div className="flex">
-        <div className="w-9/12 container mx-auto py-12">
-          <div className="max-w-lg mx-auto">
-            <label className="block text-xs font-semibold mb-2 text-gray-400">Product Name</label>
-            <input className="text-xl w-full py-2 bg-gray-50 border-2 border-gray-100 rounded-md outline-none text-center hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" placeholder="Add product name"></input>
-          </div>
-          <div className="flex max-w-2xl mx-auto py-5 items-center">
-            <div className="flex-1 flex-col">
-              <label className="block text-xs font-semibold mb-2 text-gray-400">Thumbnail Image</label>
-              <div className="flex justify-center items-center h-72 w-full rounded bg-gray-50 cursor-pointer">
-                <FontAwesomeIcon className="text-gray-200" icon={faImage} size="6x" />
+      <form>
+        <div className="flex flex-wrap p-5 sm:p-0">
+            <div className="w-12/12 sm:w-9/12 container mx-auto py-12">
+              <div className="max-w-lg mx-auto">
+                <label className="block text-xs font-semibold mb-2 text-gray-400">Product Name</label>
+                <input onChange={this.handleChange} name="productName" className="text-xl w-full py-2 bg-gray-50 border-2 border-gray-100 rounded-md outline-none text-center hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" placeholder="Add product name"></input>
+              </div>
+              <div className="flex flex-wrap max-w-2xl mx-auto py-5 items-center">
+                <div className="flex flex-col w-full sm:w-6/12">
+                  <label className="block text-xs font-semibold mb-2 text-gray-400">Thumbnail Image</label>
+                  <div onClick={this.handleUpload} className="group flex flex-col justify-center items-center h-72 w-full rounded bg-gray-50 cursor-pointer">
+                    <FontAwesomeIcon className="text-gray-200 group-hover:text-green-700 transition-all" icon={faImage} size="6x" />
+                    <span className="text-md text-gray-300 group-hover:text-gray-400 transition-all">Upload your pretty product image</span>
+                  </div>
+                  <input onChange={this.handleChange} type="hidden" name="productImage"></input>
+                </div>
+                <div className="flex w-full sm:w-6/12 pt-3 sm:pt-0">
+                  <div className="sm:pl-5 w-full">
+                    <div className="mb-3">
+                      <label className="block text-xs font-semibold mb-2 text-gray-400">Product Price</label>
+                      <input onChange={this.handleChange} name="productPrice" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="number" placeholder="Add price"></input>
+                    </div>
+                    <div className="mb-3">
+                      <label className="block text-xs font-semibold mb-2 text-gray-400">Product Description</label>
+                      <textarea onChange={this.handleChange} name="productDescription" className="text-md bg-gray-50 px-3 py-2 border-2 border-gray-100 rounded-md h-32 hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" placeholder="Add something that describe your product....."></textarea>
+                    </div>
+                    <div className="mb-3">
+                      <label className="block text-xs font-semibold mb-2 text-gray-400">Product Variation</label>
+                      <button type="button" className="relative group flex justify-center items-center h-10 w-full border-2 rounded border-dashed border-gray-200 cursor-pointer outline-none focus:outline-none hover:bg-green-100  hover:border-green-100 focus:border-green-100 transition-all">
+                        <FontAwesomeIcon className="text-gray-400 group-hover:text-green-700" icon={faPlus} size="1x" />
+                        <span className="ml-2 text-gray-400 group-hover:text-green-700">Add variation</span>
+                        <span className="absolute top-0 right-0 transform -translate-x-4 -translate-y-4 bg-green-700 text-white text-xs px-2 py-1 rounded">Coming soon</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex-1">
-              <div className="pl-5">
-                <div className="mb-3">
-                  <label className="block text-xs font-semibold mb-2 text-gray-400">Product Price</label>
-                  <input className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" placeholder="Add price"></input>
-                </div>
-                <div className="mb-3">
-                  <label className="block text-xs font-semibold mb-2 text-gray-400">Product Description</label>
-                  <textarea className="text-md bg-gray-50 px-3 py-2 border-2 border-gray-100 rounded-md h-32 hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" placeholder="Add something that describe your product....."></textarea>
-                </div>
-                <div className="mb-3">
-                  <label className="block text-xs font-semibold mb-2 text-gray-400">Product Variation</label>
-                  <button className="group flex justify-center items-center h-10 w-full border-2 rounded border-dashed border-gray-200 cursor-pointer hover:bg-green-100  hover:border-green-100 focus:border-green-100 transition-all">
-                    <FontAwesomeIcon className="text-gray-400 group-hover:text-green-700" icon={faPlus} size="1x" />
-                    <span className="ml-2 text-gray-400 group-hover:text-green-700">Add variation</span>
-                  </button>
-                </div>
-              </div>
+            <div className="hidden sm:flex flex-col justify-center items-center p-10 w-12/12 sm:w-3/12 bg-green-50">
+              <FontAwesomeIcon className="text-green-700" icon={faEye} size="6x" />
+              <h2 className="text-lg font-semibold text-gray-600 my-3">Meet the product editor!</h2>
+              <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed felis felis. Vivamus viverra egestas pulvinar. Nunc efficitur magna sit amet est viverra vehicula. Vivamus vitae lacus efficitur, ornare lacus sit amet, imperdiet ex.</p>
+              <button className="mt-4 px-5 py-1 text-white border-green-700 bg-green-700">Learn more</button>
             </div>
-          </div>
         </div>
-        <div className="flex flex-col justify-center items-center p-10 w-3/12 bg-green-50">
-          <FontAwesomeIcon className="text-green-700" icon={faEye} size="6x" />
-          <h2 className="text-lg font-semibold text-gray-600 my-3">Meet the product editor!</h2>
-          <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed felis felis. Vivamus viverra egestas pulvinar. Nunc efficitur magna sit amet est viverra vehicula. Vivamus vitae lacus efficitur, ornare lacus sit amet, imperdiet ex.</p>
-          <button className="mt-4 px-5 py-1 text-white border-green-700 bg-green-700">Learn more</button>
-        </div>
-      </div>
+      </form>
       </>
     );
   }

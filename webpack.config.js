@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     product: "./admin/js/product/onlinery-admin-product.js",
   },
+  devtool: 'source-map',
   mode: "development",
   optimization: {
     minimize: true,

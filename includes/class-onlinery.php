@@ -105,6 +105,7 @@ class Onlinery {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-onlinery-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-onlinery-public.php';
 		require_once ONLINERY_PATH . 'includes/post-types/class-onlinery-products.php';
+		require_once ONLINERY_PATH . 'includes/api/class-onlinery-api-settings.php';
 
 		$this->loader = new Onlinery_Loader();
 
@@ -166,6 +167,9 @@ class Onlinery {
 	private function define_general_hooks() {
 		$postype_products = new Onlinery_Products();
 		$this->loader->add_action( 'init', $postype_products, 'register_post_type' );
+		
+		$api = new Onlinery_API_Settings();
+		$this->loader->add_action( 'rest_api_init', $api, 'register_api' );
 	}
 
 	/**
