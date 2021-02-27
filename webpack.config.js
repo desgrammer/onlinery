@@ -10,8 +10,12 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: false,
   },
   output: {
+    pathinfo: false,
     filename: "[name].min.js",
     path: path.resolve(__dirname, "dist/js"),
   },
@@ -22,6 +26,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        include: path.resolve(__dirname, 'admin/js'),
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
@@ -29,6 +34,7 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
+        include: path.resolve(__dirname, 'admin/css'),
         use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
       },
       {

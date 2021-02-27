@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "tailwindcss/tailwind.css";
+import "../../css/onlinery-admin.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImage, faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faEye, faPlus, faFolderPlus } from '@fortawesome/free-solid-svg-icons';
 
 import wplogo from "../../../images/wordpress-logo-white.svg";
 
@@ -65,7 +65,7 @@ class App extends React.Component {
           <button onClick={this.handleSubmit} className="px-5 py-2 text-white border-green-700 bg-green-700">Save</button>
         </div>
       </div>
-      <form>
+      <form className="m-0">
         <div className="flex flex-wrap p-5 sm:p-0">
             <div className="w-12/12 sm:w-9/12 container mx-auto py-12">
               <div className="max-w-lg mx-auto">
@@ -98,6 +98,31 @@ class App extends React.Component {
                         <span className="ml-2 text-gray-400 group-hover:text-green-700">Add variation</span>
                         <span className="absolute top-0 right-0 transform -translate-x-4 -translate-y-4 bg-green-700 text-white text-xs px-2 py-1 rounded">Coming soon</span>
                       </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center w-full mt-16">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-500">File Configuration</h4>
+                    <p className="text-xs font-semibold text-gray-400">Sell your digital products</p>
+                  </div>
+                  <div>
+                    <button className="px-5 py-1 text-white border-green-700 bg-green-700">Add Files</button>
+                  </div>
+                </div>
+                <div className="w-full mt-5">
+                  <div className="relative group flex flex-col justify-center items-center h-24 w-full border-2 rounded border-dashed border-gray-200 cursor-pointer outline-none focus:outline-none focus:border-green-100 transition-all mb-3">
+                    <FontAwesomeIcon className="text-gray-300 group-hover:text-green-700" icon={faFolderPlus} size="3x" />
+                    <span className="text-md text-gray-300 group-hover:text-gray-400 transition-all">Upload your digital file</span>
+                  </div>
+                  <div className="flex flex-wrap">
+                    <div className="mb-3 w-full sm:w-6/12 sm:pr-3">
+                      <label className="block text-xs font-semibold mb-2 text-gray-400">File name</label>
+                      <input onChange={this.handleChange} name="productFileName" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="text" placeholder="Add file name"></input>
+                    </div>
+                    <div className="mb-3 w-full sm:w-6/12">
+                      <label className="block text-xs font-semibold mb-2 text-gray-400">File notes</label>
+                      <input onChange={this.handleChange} name="productFileNotes" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="text" placeholder="Give a notes to files like License key or Description"></input>
                     </div>
                   </div>
                 </div>
