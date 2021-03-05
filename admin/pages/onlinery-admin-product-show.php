@@ -4,6 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php do_action( 'wp_head' ) ?>
+    <style>
+        #wpadminbar { display: none; }
+        html { margin-top: 0 !important; }
+    </style>
 </head>
 <body>
 <div id="onlineryProducts"></div>

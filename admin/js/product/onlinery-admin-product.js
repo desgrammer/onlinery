@@ -65,7 +65,7 @@ class App extends React.Component {
           <button onClick={this.handleSubmit} className="px-5 py-2 text-white border-green-700 bg-green-700">Save</button>
         </div>
       </div>
-      <form className="m-0">
+      <form className="m-0" autocomplete="off">
         <div className="flex flex-wrap p-5 sm:p-0">
             <div className="w-12/12 sm:w-9/12 container mx-auto py-12">
               <div className="max-w-lg mx-auto">
@@ -128,7 +128,7 @@ class App extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="hidden sm:flex flex-col justify-center items-center p-10 w-12/12 sm:w-3/12 bg-green-50">
+            <div className="hidden sm:flex flex-col items-center p-10 pt-32 w-12/12 sm:w-3/12 bg-green-50">
               <FontAwesomeIcon className="text-green-700" icon={faEye} size="6x" />
               <h2 className="text-lg font-semibold text-gray-600 my-3">Meet the product editor!</h2>
               <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed felis felis. Vivamus viverra egestas pulvinar. Nunc efficitur magna sit amet est viverra vehicula. Vivamus vitae lacus efficitur, ornare lacus sit amet, imperdiet ex.</p>
