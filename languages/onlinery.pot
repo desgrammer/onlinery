@@ -1,0 +1,731 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Onlinery\n"
+"POT-Creation-Date: 2021-03-10 20:20+0700\n"
+"PO-Revision-Date: 2021-03-10 20:03+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: onlinery.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/data/currency.php:5
+msgid "United Arab Emirates dirham"
+msgstr ""
+
+#: includes/data/currency.php:6
+msgid "Afghan afghani"
+msgstr ""
+
+#: includes/data/currency.php:7
+msgid "Albanian lek"
+msgstr ""
+
+#: includes/data/currency.php:8
+msgid "Armenian dram"
+msgstr ""
+
+#: includes/data/currency.php:9
+msgid "Netherlands Antillean guilder"
+msgstr ""
+
+#: includes/data/currency.php:10
+msgid "Angolan kwanza"
+msgstr ""
+
+#: includes/data/currency.php:11
+msgid "Argentine peso"
+msgstr ""
+
+#: includes/data/currency.php:12
+msgid "Australian dollar"
+msgstr ""
+
+#: includes/data/currency.php:13
+msgid "Aruban florin"
+msgstr ""
+
+#: includes/data/currency.php:14
+msgid "Azerbaijani manat"
+msgstr ""
+
+#: includes/data/currency.php:15
+msgid "Bosnia and Herzegovina convertible mark"
+msgstr ""
+
+#: includes/data/currency.php:16
+msgid "Barbadian dollar"
+msgstr ""
+
+#: includes/data/currency.php:17
+msgid "Bangladeshi taka"
+msgstr ""
+
+#: includes/data/currency.php:18
+msgid "Bulgarian lev"
+msgstr ""
+
+#: includes/data/currency.php:19
+msgid "Bahraini dinar"
+msgstr ""
+
+#: includes/data/currency.php:20
+msgid "Burundian franc"
+msgstr ""
+
+#: includes/data/currency.php:21
+msgid "Bermudian dollar"
+msgstr ""
+
+#: includes/data/currency.php:22
+msgid "Brunei dollar"
+msgstr ""
+
+#: includes/data/currency.php:23
+msgid "Bolivian boliviano"
+msgstr ""
+
+#: includes/data/currency.php:24
+msgid "Brazilian real"
+msgstr ""
+
+#: includes/data/currency.php:25
+msgid "Bahamian dollar"
+msgstr ""
+
+#: includes/data/currency.php:26
+msgid "Bitcoin"
+msgstr ""
+
+#: includes/data/currency.php:27
+msgid "Bhutanese ngultrum"
+msgstr ""
+
+#: includes/data/currency.php:28
+msgid "Botswana pula"
+msgstr ""
+
+#: includes/data/currency.php:29
+msgid "Belarusian ruble (old)"
+msgstr ""
+
+#: includes/data/currency.php:30
+msgid "Belarusian ruble"
+msgstr ""
+
+#: includes/data/currency.php:31
+msgid "Belize dollar"
+msgstr ""
+
+#: includes/data/currency.php:32
+msgid "Canadian dollar"
+msgstr ""
+
+#: includes/data/currency.php:33
+msgid "Congolese franc"
+msgstr ""
+
+#: includes/data/currency.php:34
+msgid "Swiss franc"
+msgstr ""
+
+#: includes/data/currency.php:35
+msgid "Chilean peso"
+msgstr ""
+
+#: includes/data/currency.php:36
+msgid "Chinese yuan"
+msgstr ""
+
+#: includes/data/currency.php:37
+msgid "Colombian peso"
+msgstr ""
+
+#: includes/data/currency.php:38
+msgid "Costa Rican col&oacute;n"
+msgstr ""
+
+#: includes/data/currency.php:39
+msgid "Cuban convertible peso"
+msgstr ""
+
+#: includes/data/currency.php:40
+msgid "Cuban peso"
+msgstr ""
+
+#: includes/data/currency.php:41
+msgid "Cape Verdean escudo"
+msgstr ""
+
+#: includes/data/currency.php:42
+msgid "Czech koruna"
+msgstr ""
+
+#: includes/data/currency.php:43
+msgid "Djiboutian franc"
+msgstr ""
+
+#: includes/data/currency.php:44
+msgid "Danish krone"
+msgstr ""
+
+#: includes/data/currency.php:45
+msgid "Dominican peso"
+msgstr ""
+
+#: includes/data/currency.php:46
+msgid "Algerian dinar"
+msgstr ""
+
+#: includes/data/currency.php:47
+msgid "Egyptian pound"
+msgstr ""
+
+#: includes/data/currency.php:48
+msgid "Eritrean nakfa"
+msgstr ""
+
+#: includes/data/currency.php:49
+msgid "Ethiopian birr"
+msgstr ""
+
+#: includes/data/currency.php:50
+msgid "Euro"
+msgstr ""
+
+#: includes/data/currency.php:51
+msgid "Fijian dollar"
+msgstr ""
+
+#: includes/data/currency.php:52
+msgid "Falkland Islands pound"
+msgstr ""
+
+#: includes/data/currency.php:53
+msgid "Pound sterling"
+msgstr ""
+
+#: includes/data/currency.php:54
+msgid "Georgian lari"
+msgstr ""
+
+#: includes/data/currency.php:55
+msgid "Guernsey pound"
+msgstr ""
+
+#: includes/data/currency.php:56
+msgid "Ghana cedi"
+msgstr ""
+
+#: includes/data/currency.php:57
+msgid "Gibraltar pound"
+msgstr ""
+
+#: includes/data/currency.php:58
+msgid "Gambian dalasi"
+msgstr ""
+
+#: includes/data/currency.php:59
+msgid "Guinean franc"
+msgstr ""
+
+#: includes/data/currency.php:60
+msgid "Guatemalan quetzal"
+msgstr ""
+
+#: includes/data/currency.php:61
+msgid "Guyanese dollar"
+msgstr ""
+
+#: includes/data/currency.php:62
+msgid "Hong Kong dollar"
+msgstr ""
+
+#: includes/data/currency.php:63
+msgid "Honduran lempira"
+msgstr ""
+
+#: includes/data/currency.php:64
+msgid "Croatian kuna"
+msgstr ""
+
+#: includes/data/currency.php:65
+msgid "Haitian gourde"
+msgstr ""
+
+#: includes/data/currency.php:66
+msgid "Hungarian forint"
+msgstr ""
+
+#: includes/data/currency.php:67
+msgid "Indonesian rupiah"
+msgstr ""
+
+#: includes/data/currency.php:68
+msgid "Israeli new shekel"
+msgstr ""
+
+#: includes/data/currency.php:69
+msgid "Manx pound"
+msgstr ""
+
+#: includes/data/currency.php:70
+msgid "Indian rupee"
+msgstr ""
+
+#: includes/data/currency.php:71
+msgid "Iraqi dinar"
+msgstr ""
+
+#: includes/data/currency.php:72
+msgid "Iranian rial"
+msgstr ""
+
+#: includes/data/currency.php:73
+msgid "Iranian toman"
+msgstr ""
+
+#: includes/data/currency.php:74
+msgid "Icelandic kr&oacute;na"
+msgstr ""
+
+#: includes/data/currency.php:75
+msgid "Jersey pound"
+msgstr ""
+
+#: includes/data/currency.php:76
+msgid "Jamaican dollar"
+msgstr ""
+
+#: includes/data/currency.php:77
+msgid "Jordanian dinar"
+msgstr ""
+
+#: includes/data/currency.php:78
+msgid "Japanese yen"
+msgstr ""
+
+#: includes/data/currency.php:79
+msgid "Kenyan shilling"
+msgstr ""
+
+#: includes/data/currency.php:80
+msgid "Kyrgyzstani som"
+msgstr ""
+
+#: includes/data/currency.php:81
+msgid "Cambodian riel"
+msgstr ""
+
+#: includes/data/currency.php:82
+msgid "Comorian franc"
+msgstr ""
+
+#: includes/data/currency.php:83
+msgid "North Korean won"
+msgstr ""
+
+#: includes/data/currency.php:84
+msgid "South Korean won"
+msgstr ""
+
+#: includes/data/currency.php:85
+msgid "Kuwaiti dinar"
+msgstr ""
+
+#: includes/data/currency.php:86
+msgid "Cayman Islands dollar"
+msgstr ""
+
+#: includes/data/currency.php:87
+msgid "Kazakhstani tenge"
+msgstr ""
+
+#: includes/data/currency.php:88
+msgid "Lao kip"
+msgstr ""
+
+#: includes/data/currency.php:89
+msgid "Lebanese pound"
+msgstr ""
+
+#: includes/data/currency.php:90
+msgid "Sri Lankan rupee"
+msgstr ""
+
+#: includes/data/currency.php:91
+msgid "Liberian dollar"
+msgstr ""
+
+#: includes/data/currency.php:92
+msgid "Lesotho loti"
+msgstr ""
+
+#: includes/data/currency.php:93
+msgid "Libyan dinar"
+msgstr ""
+
+#: includes/data/currency.php:94
+msgid "Moroccan dirham"
+msgstr ""
+
+#: includes/data/currency.php:95
+msgid "Moldovan leu"
+msgstr ""
+
+#: includes/data/currency.php:96
+msgid "Malagasy ariary"
+msgstr ""
+
+#: includes/data/currency.php:97
+msgid "Macedonian denar"
+msgstr ""
+
+#: includes/data/currency.php:98
+msgid "Burmese kyat"
+msgstr ""
+
+#: includes/data/currency.php:99
+msgid "Mongolian t&ouml;gr&ouml;g"
+msgstr ""
+
+#: includes/data/currency.php:100
+msgid "Macanese pataca"
+msgstr ""
+
+#: includes/data/currency.php:101
+msgid "Mauritanian ouguiya"
+msgstr ""
+
+#: includes/data/currency.php:102
+msgid "Mauritian rupee"
+msgstr ""
+
+#: includes/data/currency.php:103
+msgid "Maldivian rufiyaa"
+msgstr ""
+
+#: includes/data/currency.php:104
+msgid "Malawian kwacha"
+msgstr ""
+
+#: includes/data/currency.php:105
+msgid "Mexican peso"
+msgstr ""
+
+#: includes/data/currency.php:106
+msgid "Malaysian ringgit"
+msgstr ""
+
+#: includes/data/currency.php:107
+msgid "Mozambican metical"
+msgstr ""
+
+#: includes/data/currency.php:108
+msgid "Namibian dollar"
+msgstr ""
+
+#: includes/data/currency.php:109
+msgid "Nigerian naira"
+msgstr ""
+
+#: includes/data/currency.php:110
+msgid "Nicaraguan c&oacute;rdoba"
+msgstr ""
+
+#: includes/data/currency.php:111
+msgid "Norwegian krone"
+msgstr ""
+
+#: includes/data/currency.php:112
+msgid "Nepalese rupee"
+msgstr ""
+
+#: includes/data/currency.php:113
+msgid "New Zealand dollar"
+msgstr ""
+
+#: includes/data/currency.php:114
+msgid "Omani rial"
+msgstr ""
+
+#: includes/data/currency.php:115
+msgid "Panamanian balboa"
+msgstr ""
+
+#: includes/data/currency.php:116
+msgid "Sol"
+msgstr ""
+
+#: includes/data/currency.php:117
+msgid "Papua New Guinean kina"
+msgstr ""
+
+#: includes/data/currency.php:118
+msgid "Philippine peso"
+msgstr ""
+
+#: includes/data/currency.php:119
+msgid "Pakistani rupee"
+msgstr ""
+
+#: includes/data/currency.php:120
+msgid "Polish z&#x142;oty"
+msgstr ""
+
+#: includes/data/currency.php:121
+msgid "Transnistrian ruble"
+msgstr ""
+
+#: includes/data/currency.php:122
+msgid "Paraguayan guaran&iacute;"
+msgstr ""
+
+#: includes/data/currency.php:123
+msgid "Qatari riyal"
+msgstr ""
+
+#: includes/data/currency.php:124
+msgid "Romanian leu"
+msgstr ""
+
+#: includes/data/currency.php:125
+msgid "Serbian dinar"
+msgstr ""
+
+#: includes/data/currency.php:126
+msgid "Russian ruble"
+msgstr ""
+
+#: includes/data/currency.php:127
+msgid "Rwandan franc"
+msgstr ""
+
+#: includes/data/currency.php:128
+msgid "Saudi riyal"
+msgstr ""
+
+#: includes/data/currency.php:129
+msgid "Solomon Islands dollar"
+msgstr ""
+
+#: includes/data/currency.php:130
+msgid "Seychellois rupee"
+msgstr ""
+
+#: includes/data/currency.php:131
+msgid "Sudanese pound"
+msgstr ""
+
+#: includes/data/currency.php:132
+msgid "Swedish krona"
+msgstr ""
+
+#: includes/data/currency.php:133
+msgid "Singapore dollar"
+msgstr ""
+
+#: includes/data/currency.php:134
+msgid "Saint Helena pound"
+msgstr ""
+
+#: includes/data/currency.php:135
+msgid "Sierra Leonean leone"
+msgstr ""
+
+#: includes/data/currency.php:136
+msgid "Somali shilling"
+msgstr ""
+
+#: includes/data/currency.php:137
+msgid "Surinamese dollar"
+msgstr ""
+
+#: includes/data/currency.php:138
+msgid "South Sudanese pound"
+msgstr ""
+
+#: includes/data/currency.php:139
+msgid "S&atilde;o Tom&eacute; and Pr&iacute;ncipe dobra"
+msgstr ""
+
+#: includes/data/currency.php:140
+msgid "Syrian pound"
+msgstr ""
+
+#: includes/data/currency.php:141
+msgid "Swazi lilangeni"
+msgstr ""
+
+#: includes/data/currency.php:142
+msgid "Thai baht"
+msgstr ""
+
+#: includes/data/currency.php:143
+msgid "Tajikistani somoni"
+msgstr ""
+
+#: includes/data/currency.php:144
+msgid "Turkmenistan manat"
+msgstr ""
+
+#: includes/data/currency.php:145
+msgid "Tunisian dinar"
+msgstr ""
+
+#: includes/data/currency.php:146
+msgid "Tongan pa&#x2bb;anga"
+msgstr ""
+
+#: includes/data/currency.php:147
+msgid "Turkish lira"
+msgstr ""
+
+#: includes/data/currency.php:148
+msgid "Trinidad and Tobago dollar"
+msgstr ""
+
+#: includes/data/currency.php:149
+msgid "New Taiwan dollar"
+msgstr ""
+
+#: includes/data/currency.php:150
+msgid "Tanzanian shilling"
+msgstr ""
+
+#: includes/data/currency.php:151
+msgid "Ukrainian hryvnia"
+msgstr ""
+
+#: includes/data/currency.php:152
+msgid "Ugandan shilling"
+msgstr ""
+
+#: includes/data/currency.php:153
+msgid "United States (US) dollar"
+msgstr ""
+
+#: includes/data/currency.php:154
+msgid "Uruguayan peso"
+msgstr ""
+
+#: includes/data/currency.php:155
+msgid "Uzbekistani som"
+msgstr ""
+
+#: includes/data/currency.php:156
+msgid "Venezuelan bol&iacute;var"
+msgstr ""
+
+#: includes/data/currency.php:157
+msgid "Bol&iacute;var soberano"
+msgstr ""
+
+#: includes/data/currency.php:158
+msgid "Vietnamese &#x111;&#x1ed3;ng"
+msgstr ""
+
+#: includes/data/currency.php:159
+msgid "Vanuatu vatu"
+msgstr ""
+
+#: includes/data/currency.php:160
+msgid "Samoan t&#x101;l&#x101;"
+msgstr ""
+
+#: includes/data/currency.php:161
+msgid "Central African CFA franc"
+msgstr ""
+
+#: includes/data/currency.php:162
+msgid "East Caribbean dollar"
+msgstr ""
+
+#: includes/data/currency.php:163
+msgid "West African CFA franc"
+msgstr ""
+
+#: includes/data/currency.php:164
+msgid "CFP franc"
+msgstr ""
+
+#: includes/data/currency.php:165
+msgid "Yemeni rial"
+msgstr ""
+
+#: includes/data/currency.php:166
+msgid "South African rand"
+msgstr ""
+
+#: includes/data/currency.php:167
+msgid "Zambian kwacha"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:19
+#: includes/post-types/class-onlinery-products.php:21
+#: includes/post-types/class-onlinery-products.php:22
+msgid "Products"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:20
+msgid "Product"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:23
+#: includes/post-types/class-onlinery-products.php:24
+msgid "Add Product"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:25
+#: includes/post-types/class-onlinery-products.php:26
+msgid "Edit Product"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:27
+msgid "New Product"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:28
+#: includes/post-types/class-onlinery-products.php:29
+msgid "Show Product"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:30
+msgid "Find Product"
+msgstr ""
+
+#: includes/post-types/class-onlinery-products.php:31
+msgid "Product not found"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Onlinery"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://onlinery.id"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "The most versatile online store plugin."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DesGrammer"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://desgrammer.com"
+msgstr ""

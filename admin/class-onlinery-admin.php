@@ -97,6 +97,14 @@ class Onlinery_Admin {
 		 */
 		wp_enqueue_media();
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/onlinery-admin.js', array( 'jquery' ), $this->version, false );
+
+		wp_register_script( $this->plugin_name . '-add-products', '', array(), $this->version, false );
+		wp_localize_script(
+			$this->plugin_name . '-add-products',
+			'onlinery_translation',
+			require_once ONLINERY_PATH . 'includes/plugin-translation.php'
+		);
+		wp_enqueue_script( $this->plugin_name . '-add-products' );
 	}
 
 	public function onlinery_admin_widget( $data ) {

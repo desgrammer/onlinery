@@ -45,6 +45,7 @@ class Onlinery_Products {
 					'with_front' => true,
 				),
 				'can_export'   => true,
+				'show_in_rest' => true,
 			)
 		);
     }

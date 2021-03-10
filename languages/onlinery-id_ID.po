@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Onlinery\n"
+"POT-Creation-Date: 2021-03-10 23:58+0700\n"
+"PO-Revision-Date: 2021-03-10 23:58+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: onlinery.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: languages\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: admin/js\n"
+"X-Poedit-SearchPathExcluded-2: dist\n"
+"X-Poedit-SearchPathExcluded-3: includes/data\n"
+
+#: includes/plugin-translation.php:6
+msgid "Choose your Product type"
+msgstr "Pilih tipe Produk"
+
+#: includes/plugin-translation.php:7
+msgid "Choose that fit with your product"
+msgstr "Pilih yang sesuai dengan produk kamu"
+
+#: includes/plugin-translation.php:8
+msgid "Physical Products"
+msgstr "Produk Fisik"
+
+#: includes/plugin-translation.php:9
+msgid ""
+"It's something like T-Shirt, Computer, or everything can be sold offline"
+msgstr "Seperti Kaos, Komputer, atau apapun yang bisa dijual secara offline"
+
+#: includes/plugin-translation.php:10
+msgid "Digital Products"
+msgstr "Produk Digital"
+
+#: includes/plugin-translation.php:11
+msgid "It's something like Windows, WordPress Theme, WordPress Plugin and more"
+msgstr "Seperti Software Windows, Tema WordPress, Plugin WordPress dan lainnya"
+
+#: includes/post-types/class-onlinery-products.php:19
+#: includes/post-types/class-onlinery-products.php:21
+#: includes/post-types/class-onlinery-products.php:22
+msgid "Products"
+msgstr "Produk"
+
+#: includes/post-types/class-onlinery-products.php:20
+msgid "Product"
+msgstr "Produk"
+
+#: includes/post-types/class-onlinery-products.php:23
+#: includes/post-types/class-onlinery-products.php:24
+msgid "Add Product"
+msgstr "Tambah Produk"
+
+#: includes/post-types/class-onlinery-products.php:25
+#: includes/post-types/class-onlinery-products.php:26
+msgid "Edit Product"
+msgstr "Edit Produk"
+
+#: includes/post-types/class-onlinery-products.php:27
+msgid "New Product"
+msgstr "Produk Baru"
+
+#: includes/post-types/class-onlinery-products.php:28
+#: includes/post-types/class-onlinery-products.php:29
+msgid "Show Product"
+msgstr "Tampilkan Produk"
+
+#: includes/post-types/class-onlinery-products.php:30
+msgid "Find Product"
+msgstr "Cari Produk"
+
+#: includes/post-types/class-onlinery-products.php:31
+msgid "Product not found"
+msgstr "Produk tidak ditemukan"
+
+#. Plugin Name of the plugin/theme
+msgid "Onlinery"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://onlinery.id"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "The most versatile online store plugin."
+msgstr "Plugin toko online paling serbaguna."
+
+#. Author of the plugin/theme
+msgid "DesGrammer"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://desgrammer.com"
+msgstr ""
