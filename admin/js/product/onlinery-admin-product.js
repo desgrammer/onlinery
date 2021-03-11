@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import anime from 'animejs';
 
 import Modal from '../components/modal';
 
@@ -13,12 +14,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productName: '',
-      productPrice: '',
-      productDescription: '',
-      productImage: '',
+      // productName: '',
+      // productPrice: '',
+      // productDescription: '',
+      // productImage: '',
+      modalShow: false,
+      selectedProductType: '',
     };
 
+    this.handleLoad   = this.handleLoad.bind(this);
+    this.handleModal  = this.handleModal.bind(this);
+    this.handleChoose = this.handleChoose.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,7 +35,41 @@ class App extends React.Component {
   }
 
   handleLoad() {
+    this.handleModal(true)
+  }
 
+  handleModal(modalStatus) {
+    if (modalStatus) {
+      anime({
+          targets: '.modal-wrapper',
+          scale: [.8, 1],
+          opacity: 1,
+          easing: 'easeInOutExpo',
+      })
+    } else {
+      if (this.state.selectedProductType === '') {
+        return
+      }
+      anime({
+          targets: '.modal-wrapper',
+          scale: .8,
+          opacity: 0,
+          easing: 'easeInOutExpo',
+      })
+      anime({
+        targets: '.modal',
+        opacity: 0,
+        easing: 'easeInOutExpo',
+        complete: function() {
+          document.querySelector('.modal').style.display = 'none'
+        }
+      })
+    }
+    this.setState({modalShow: modalStatus})
+  }
+
+  handleChoose(type) {
+    this.setState({selectedProductType: type})
   }
 
   handleUpload() {
@@ -53,7 +93,6 @@ class App extends React.Component {
 
   handleChange(event) {
     let name = event.target.getAttribute('name')
-    console.log(name)
     this.setState({[name]: event.target.value});
   }
 
@@ -149,7 +188,11 @@ class App extends React.Component {
             </div>
           </form>
         </div>
-        {/* <Modal /> */}
+        <Modal 
+          show={this.state.modalShow}
+          selectedType={this.state.selectedProductType}
+          handleModal={this.handleModal}
+          chooseHandler={this.handleChoose} />
       </>
     );
   }
