@@ -1,0 +1,33 @@
+{
+  "name": "onlinery",
+  "version": "0.0.1",
+  "description": "=== Plugin Name ===\r Contributors: (this should be a list of wordpress.org userid's)\r Donate link: https://desgrammer.com\r Tags: comments, spam\r Requires at least: 3.0.1\r Tested up to: 3.4\r Stable tag: 4.3\r License: GPLv2 or later\r License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "framer-motion": "^3.3.0"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.13",
+    "mix-tailwindcss": "^1.3.0",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-loader": "^5.2.0",
+    "tailwindcss": "^2.0.4"
+  },
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desgrammer/onlinery.git"
+  },
+  "author": "DesGrammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desgrammer/onlinery/issues"
+  },
+  "homepage": "https://github.com/desgrammer/onlinery#readme"
+}
