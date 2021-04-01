@@ -14,10 +14,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // productName: '',
-      // productPrice: '',
-      // productDescription: '',
-      // productImage: '',
+      formData: {
+        productName: '',
+        productPrice: '',
+        productDescription: '',
+      },
+      productImage: '',
       modalShow: false,
       selectedProductType: '',
     };
@@ -93,7 +95,12 @@ class App extends React.Component {
 
   handleChange(event) {
     let name = event.target.getAttribute('name')
-    this.setState({[name]: event.target.value});
+    this.setState(prevState => {
+      let formData = {...this.state.formData}
+      formData[name] = event.target.value
+
+      return { formData }
+    });
   }
 
   handleSubmit() {
@@ -143,40 +150,44 @@ class App extends React.Component {
                           <textarea onChange={this.handleChange} name="productDescription" className="text-md bg-gray-50 px-3 py-2 border-2 border-gray-100 rounded-md h-32 hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" placeholder="Add something that describe your product....."></textarea>
                         </div>
                         <div className="mb-3">
-                          <label className="block text-xs font-semibold mb-2 text-gray-400">Product Variation</label>
+                          <label className="block text-xs font-semibold mb-2 text-gray-400">Variation and Additional Information</label>
                           <button type="button" className="relative group flex justify-center items-center h-10 w-full border-2 rounded border-dashed border-gray-200 cursor-pointer outline-none focus:outline-none hover:bg-green-100  hover:border-green-100 focus:border-green-100 transition-all">
                             <FontAwesomeIcon className="text-gray-400 group-hover:text-green-700" icon={faPlus} size="1x" />
-                            <span className="ml-2 text-gray-400 group-hover:text-green-700">Add variation</span>
+                            <span className="ml-2 text-gray-400 group-hover:text-green-700">Add data</span>
                             <span className="absolute top-0 right-0 transform -translate-x-4 -translate-y-4 bg-green-700 text-white text-xs px-2 py-1 rounded">Coming soon</span>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div className="flex justify-between items-center w-full mt-16">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-500">File Configuration</h4>
-                        <p className="text-xs font-semibold text-gray-400">Sell your digital products</p>
-                      </div>
-                      <div>
-                        <button className="px-5 py-1 text-white border-green-700 bg-green-700">Add Files</button>
-                      </div>
-                    </div>
-                    <div className="w-full mt-5">
-                      <div className="relative group flex flex-col justify-center items-center h-24 w-full border-2 rounded border-dashed border-gray-200 cursor-pointer outline-none focus:outline-none focus:border-green-100 transition-all mb-3">
-                        <FontAwesomeIcon className="text-gray-300 group-hover:text-green-700" icon={faFolderPlus} size="3x" />
-                        <span className="text-md text-gray-300 group-hover:text-gray-400 transition-all">Upload your digital file</span>
-                      </div>
-                      <div className="flex flex-wrap">
-                        <div className="mb-3 w-full sm:w-6/12 sm:pr-3">
-                          <label className="block text-xs font-semibold mb-2 text-gray-400">File name</label>
-                          <input onChange={this.handleChange} name="productFileName" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="text" placeholder="Add file name"></input>
+                    {this.state.selectedProductType == 'digital' && (
+                      <>
+                      <div className="flex justify-between items-center w-full mt-16">
+                        <div>
+                          <h4 className="text-lg font-semibold text-gray-500">File Configuration</h4>
+                          <p className="text-xs font-semibold text-gray-400">Sell your digital products</p>
                         </div>
-                        <div className="mb-3 w-full sm:w-6/12">
-                          <label className="block text-xs font-semibold mb-2 text-gray-400">File notes</label>
-                          <input onChange={this.handleChange} name="productFileNotes" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="text" placeholder="Give a notes to files like License key or Description"></input>
+                        <div>
+                          <button className="px-5 py-1 text-white border-green-700 bg-green-700">Add Files</button>
                         </div>
                       </div>
-                    </div>
+                      <div className="w-full mt-5">
+                        <div className="relative group flex flex-col justify-center items-center h-24 w-full border-2 rounded border-dashed border-gray-200 cursor-pointer outline-none focus:outline-none focus:border-green-100 transition-all mb-3">
+                          <FontAwesomeIcon className="text-gray-300 group-hover:text-green-700" icon={faFolderPlus} size="3x" />
+                          <span className="text-md text-gray-300 group-hover:text-gray-400 transition-all">Upload your digital file</span>
+                        </div>
+                        <div className="flex flex-wrap">
+                          <div className="mb-3 w-full sm:w-6/12 sm:pr-3">
+                            <label className="block text-xs font-semibold mb-2 text-gray-400">File name</label>
+                            <input onChange={this.handleChange} name="productFileName" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="text" placeholder="Add file name"></input>
+                          </div>
+                          <div className="mb-3 w-full sm:w-6/12">
+                            <label className="block text-xs font-semibold mb-2 text-gray-400">File notes</label>
+                            <input onChange={this.handleChange} name="productFileNotes" className="text-md bg-gray-50 w-full px-3 py-2 border-2 border-gray-100 rounded-md outline-none hover:bg-green-50 focus:bg-green-50 hover:border-green-100 focus:border-green-100 transition-all" type="text" placeholder="Give a notes to files like License key or Description"></input>
+                          </div>
+                        </div>
+                      </div>
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className="hidden sm:flex flex-col items-center p-10 pt-32 w-12/12 sm:w-3/12 bg-green-50">
